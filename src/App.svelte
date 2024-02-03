@@ -9,7 +9,9 @@
 </script>
 
 <main>
-  <img src={logo} alt="Ridgehacks 2024 logo" class="logo" />
+  <a href="/">
+    <img src={logo} alt="Ridgehacks 2024 logo" class="logo" />
+  </a>
 
   <div class="navbar">
     <InnerLink href="#schedule">Schedule</InnerLink>
@@ -87,6 +89,8 @@
 </main>
 
 <style lang="scss">
+  @use "style/typefaces.scss";
+
   .logo {
     position: relative;
     left: 50%;
@@ -129,11 +133,13 @@
 
     font-size: 0.7em;
     margin-bottom: 40px;
-    line-height: 0.5em;
+    line-height: 0.2em;
     text-align: center;
 
     & a,
     & p {
+      font-family: typefaces.$degular;
+      font-feature-settings: "c2sc";
       color: #fff;
     }
 

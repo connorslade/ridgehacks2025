@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Patua One";
+  src: url("/fonts/PatuaOne-Regular.ttf") format("truetype");
+}
+$patua-one: "Patua One", sans-serif;
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/Degular-Regular.woff2") format("woff2");
+}
+$degular: "Degular", sans-serif;
