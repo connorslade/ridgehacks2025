@@ -15,6 +15,7 @@
     padding: 20px;
     padding-top: 10px;
     margin-bottom: 20px;
+    scroll-margin-top: 20px;
 
     &:nth-child(even) {
       background-color: #49808a;

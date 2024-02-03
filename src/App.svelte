@@ -6,6 +6,7 @@
   import Section from "./lib/Section.svelte";
   import ListItem from "./lib/ListItem.svelte";
   import Link from "./lib/Link.svelte";
+  import Time from "./lib/Time.svelte";
 </script>
 
 <main>
@@ -20,7 +21,7 @@
     <InnerLink href="#map">Map</InnerLink>
     <InnerLink href="#sponsors">Sponsors</InnerLink>
     <InnerLink href="#organizers">Organizers</InnerLink>
-    <a href="/">Register</a>
+    <a href="/" class="register">Register</a>
   </div>
 
   <div class="sections">
@@ -36,7 +37,44 @@
     </Section>
 
     <Section title="Schedule">
-      <p>todo&hellip;</p>
+      <table class="schedule">
+        <thead>
+          <th class="time">Time</th>
+          <th class="activity">Main Areas</th>
+          <th class="activity">Room 701</th>
+          <th class="activity">PAC</th>
+        </thead>
+        <tr>
+          <td><Time hour={8} /></td>
+          <td>Check-in</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><Time hour={8} minute={15} /></td>
+          <td></td>
+          <td></td>
+          <td>Opening Ceremony</td>
+        </tr>
+        <tr>
+          <td><Time hour={9} /></td>
+          <td>Hacking Begins</td>
+          <td></td>
+          <td>EEC Speaker</td>
+        </tr>
+        <tr>
+          <td><Time hour={10} /></td>
+          <td>Breakfast</td>
+          <td>Consumer Repair Workshop sponsored by Tulls Automotive</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><Time hour={11} /></td>
+          <td></td>
+          <td>Open CV Workshop sponsored by Ridge Marketing</td>
+          <td></td>
+        </tr>
+      </table>
     </Section>
 
     <Section title="Event Details">
@@ -89,6 +127,7 @@
 </main>
 
 <style lang="scss">
+  @use "sass:color";
   @use "style/typefaces.scss";
 
   .logo {
@@ -112,6 +151,10 @@
       text-decoration: none;
       color: #fff;
       font-size: 20px;
+    }
+
+    & .register {
+      color: var(--accent-color);
     }
   }
 
@@ -146,6 +189,31 @@
     & .logo {
       width: 300px;
       margin-bottom: 10px;
+    }
+  }
+
+  .schedule {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    & th,
+    & td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    & tr,
+    & th {
+      border-bottom: 1px solid color.adjust(white, $alpha: -0.5);
+    }
+
+    .activity {
+      width: 33%;
+    }
+
+    .time {
+      width: 100px;
     }
   }
 </style>
