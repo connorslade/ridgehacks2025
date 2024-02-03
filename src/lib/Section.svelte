@@ -1,14 +1,17 @@
 <script lang="ts">
   export let title: string;
+  export let hidden: boolean = false;
   let id = title.toLowerCase().replace(/\s/g, "-");
 </script>
 
-<div {id} class="section">
+<div {id} style:display={hidden ? "none" : "block"} class="section">
   <h1>{title}</h1>
   <slot />
 </div>
 
-<style>
+<style lang="scss">
+  @use "sass:color";
+
   .section {
     border-radius: 8px;
     background-color: var(--foreground-color);
@@ -16,10 +19,11 @@
     padding-top: 10px;
     margin-bottom: 20px;
     scroll-margin-top: 20px;
-  }
+    color: #000;
 
-  :global(.section:nth-child(odd)) {
-    background-color: #49808a;
-    color: #fff;
+    &:nth-child(odd) {
+      background-color: #49808a;
+      color: #fff;
+    }
   }
 </style>

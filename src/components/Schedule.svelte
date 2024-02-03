@@ -61,8 +61,10 @@
   </thead>
 
   {#each times as time}
-    <tr>
-      <td><Time hour={time.hour} minute={time.minute} /></td>
+    <tr class={time.toString() == "10:00" ? "current-time" : ""}>
+      <td>
+        <Time hour={time.hour} minute={time.minute} />
+      </td>
       {#each rooms as room}
         {#if data[room][time.toString()]}
           <td>{@html data[room][time.toString()]}</td>
@@ -91,6 +93,10 @@
     & tr,
     & th {
       border-bottom: 1px solid color.adjust(white, $alpha: -0.5);
+    }
+
+    .current-time {
+      background-color: color.adjust(white, $alpha: -0.8);
     }
 
     .activity {

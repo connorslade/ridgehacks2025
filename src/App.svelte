@@ -26,9 +26,12 @@
   </div>
 
   <div class="sections">
-    <Section title="Important Updates">
-      <p>Click here to subscribe to push notifications for future updates.</p>
-      <hr style:color={"white"} />
+    <Section title="Updates" hidden={false}>
+      <p>
+        Click <a href="/">here</a> to subscribe to push notifications for future
+        updates.
+      </p>
+      <hr />
 
       <ListItem title="6:14 PM">
         Make sure you all have your team cards (the one with the numbers)! They
@@ -36,14 +39,16 @@
         Rachel in the Cafe.
       </ListItem>
       <ListItem title="10:12 AM">
-        Have a song request for the cafeteria playlist? Submit them here!
+        Have a song request for the cafeteria playlist? Submit them <a href="/"
+          >here</a
+        >!
       </ListItem>
       <ListItem title="8:47 AM">
-        Find the opening ceremony slides here.
+        Find the opening ceremony slides <a href="/">here</a>.
       </ListItem>
       <ListItem title="6:39 AM">
-        Please make sure you have filled out the MLH Form and our Tally Form in
-        order to participate.
+        Please make sure you have filled out the <a href="/">MLH Form</a> and
+        our <a href="/">Tally Form</a> in order to participate.
       </ListItem>
     </Section>
 
@@ -134,8 +139,6 @@
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 30px;
-    // color: #fff;
-    // For bullets between each nav link
 
     & :global(a) {
       color: #fff;
