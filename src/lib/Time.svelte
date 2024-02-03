@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { settings } from "../settings";
+
   export let hour: number;
   export let minute: number = 0;
 
@@ -17,4 +19,8 @@
   }
 </script>
 
-{to12Hour(hour, minute)}
+{#if $settings.militaryTime}
+  {to24Hour(hour, minute)}
+{:else}
+  {to12Hour(hour, minute)}
+{/if}
