@@ -1,0 +1,24 @@
+:root {
+  --background-color: #232f29;
+  --accent-color: #9eccb3;
+  --foreground-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration-style: wavy;
+}
