@@ -3,13 +3,13 @@
   let id = title.toLowerCase().replace(/\s/g, "-");
 </script>
 
-<main {id}>
+<div {id} class="section">
   <h1>{title}</h1>
   <slot />
-</main>
+</div>
 
 <style>
-  main {
+  .section {
     border-radius: 8px;
     background-color: var(--foreground-color);
     padding: 20px;

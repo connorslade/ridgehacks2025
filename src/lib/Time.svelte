@@ -17,6 +17,4 @@
   }
 </script>
 
-<main>
-  {to12Hour(hour, minute)}
-</main>
+{to12Hour(hour, minute)}
