@@ -26,6 +26,27 @@
   </div>
 
   <div class="sections">
+    <Section title="Important Updates">
+      <p>Click here to subscribe to push notifications for future updates.</p>
+      <hr style:color={"white"} />
+
+      <ListItem title="6:14 PM">
+        Make sure you all have your team cards (the one with the numbers)! They
+        are used for judging and are really important. If you need a card see
+        Rachel in the Cafe.
+      </ListItem>
+      <ListItem title="10:12 AM">
+        Have a song request for the cafeteria playlist? Submit them here!
+      </ListItem>
+      <ListItem title="8:47 AM">
+        Find the opening ceremony slides here.
+      </ListItem>
+      <ListItem title="6:39 AM">
+        Please make sure you have filled out the MLH Form and our Tally Form in
+        order to participate.
+      </ListItem>
+    </Section>
+
     <Section title="Ridgehacks 2024">
       <p>
         Ridgehacks 2023 is Ridge High School's premier annual hackathon led by
@@ -101,7 +122,7 @@
     left: 50%;
     transform: translateX(-50%);
     max-width: 600px;
-    width: 75vw;
+    width: 60vw;
     margin-bottom: -20px;
   }
 
@@ -129,8 +150,8 @@
 
   .sections {
     margin: 0;
-    padding: 10px;
-    max-width: 1200px;
+    padding: 20px;
+    max-width: 1000px;
 
     position: relative;
     left: 50%;

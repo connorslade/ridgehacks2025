@@ -18,7 +18,7 @@
     scroll-margin-top: 20px;
   }
 
-  :global(.section:nth-child(even)) {
+  :global(.section:nth-child(odd)) {
     background-color: #49808a;
     color: #fff;
   }
