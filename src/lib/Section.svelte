@@ -16,10 +16,10 @@
     padding-top: 10px;
     margin-bottom: 20px;
     scroll-margin-top: 20px;
+  }
 
-    &:nth-child(even) {
-      background-color: #49808a;
-      color: #fff;
-    }
+  :global(.section:nth-child(even)) {
+    background-color: #49808a;
+    color: #fff;
   }
 </style>

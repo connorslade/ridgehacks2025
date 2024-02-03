@@ -73,7 +73,10 @@
     </Section>
 
     <Section title="Sponsors">
-      <p>todo&hellip;</p>
+      <h2>Emerald Sponsors</h2>
+      <h2>Gold Sponsors</h2>
+      <h2>Silver Sponsors</h2>
+      <h2>Bronze Sponsors</h2>
     </Section>
 
     <Section title="Organizers">
@@ -106,13 +109,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 30px;
+    // color: #fff;
+    // For bullets between each nav link
 
     & :global(a) {
-      text-decoration: none;
       color: #fff;
+      text-decoration: none;
       font-size: 20px;
     }
 

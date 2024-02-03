@@ -2,15 +2,23 @@
   "Main Areas": {
     "8:00": "Check-in",
     "9:00": "Hacking Begins",
-    "10:00": "Breakfast"
+    "10:00": "Breakfast",
+    "13:00": "Lunch (and Super Smash Bros Tournament)",
+    "18:00": "Dinner (and chess tournament)",
+    "20:00": "Hardstop Hacking",
+    "22:00": "Event Ends"
   },
   "Room 701": {
     "10:00": "Consumer Repair Workshop sponsored by Tulls Automotive",
-    "11:00": "Open CV Workshop sponsored by Ridge Marketing"
+    "11:00": "Open CV Workshop sponsored by Ridge Marketing",
+    "16:00": "Cybersecurity Workshop sponsored by the Bernards PBA",
+    "18:00": "Judges Meeting",
+    "19:00": "CS as Job? Experiences from Industry by Chad Wiedemann"
   },
   "PAC": {
     "8:15": "Opening Ceremony",
     "9:00": "EEC Speaker",
-    "10:00": "<em>Markup Test</em>"
+    "20:45": "Finalist Presentations",
+    "21:45": "Closing Ceremony"
   }
 }

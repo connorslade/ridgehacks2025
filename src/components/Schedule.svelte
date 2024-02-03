@@ -94,7 +94,7 @@
     }
 
     .activity {
-      width: 33%;
+      width: auto;
     }
 
     .time {
