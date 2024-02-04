@@ -52,8 +52,6 @@
   async function subscribe() {
     if (!serviceWorker) return;
 
-    // Notification.requestPermission();
-
     const key = urlBase64ToUint8Array(publicKey);
     let subscription = await serviceWorker.pushManager.subscribe({
       userVisibleOnly: true,

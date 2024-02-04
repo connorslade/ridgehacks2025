@@ -13,7 +13,7 @@ struct UnsubscribeRequest {
 pub fn attach(server: &mut Server<App>) {
     server.post("/api/unsubscribe", |ctx| {
         let body = serde_json::from_slice::<UnsubscribeRequest>(&ctx.req.body)?;
-        info!("Unsubscribing: {}", body.endpoint);
+        info!("Unsubscribing");
 
         ctx.app().database.remove_subscriber(&body.endpoint)?;
 

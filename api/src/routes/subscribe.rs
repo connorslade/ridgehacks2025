@@ -1,6 +1,6 @@
 use afire::{extensions::RouteShorthands, Content, Server};
 use serde_json::json;
-use tracing::info;
+use tracing::{info, warn};
 use web_push::{
     ContentEncoding, IsahcWebPushClient, SubscriptionInfo, Urgency, WebPushClient,
     WebPushMessageBuilder,
@@ -13,7 +13,7 @@ pub fn attach(server: &mut Server<App>) {
         let app = ctx.app();
 
         let request = serde_json::from_slice::<PushSubscribe>(&ctx.req.body)?;
-        info!("New subscriber: {}", request.endpoint);
+        info!("New subscriber");
         app.database.add_subscriber(&request)?;
 
         ctx.text(json!({"status": "ok"}))
@@ -40,8 +40,9 @@ pub fn attach(server: &mut Server<App>) {
         let message = builder.build()?;
         let client = IsahcWebPushClient::new()?;
 
-        let response = app.runtime.block_on(client.send(message));
-        let _ = dbg!("{:?}", response);
+        if let Err(e) = app.runtime.block_on(client.send(message)) {
+            warn!("Failed to send push notification: {}", e);
+        }
 
         Ok(())
     });

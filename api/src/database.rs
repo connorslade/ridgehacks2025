@@ -3,7 +3,7 @@ use std::process;
 use anyhow::Result;
 use parking_lot::{MappedMutexGuard, Mutex, MutexGuard};
 use rusqlite::Connection;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use tracing::{error, info};
 
 // Increment every time schema changes, even in dev
@@ -95,6 +95,13 @@ impl Db {
             .execute("DELETE FROM subscribers WHERE endpoint = ?", [endpoint])?;
         Ok(())
     }
+
+    pub fn get_stats(&self) -> Result<Stats> {
+        let count = self
+            .lock()
+            .query_row("SELECT COUNT(*) FROM subscribers", [], |row| row.get(0))?;
+        Ok(Stats { count })
+    }
 }
 
 #[derive(Deserialize)]
@@ -102,4 +109,9 @@ pub struct PushSubscribe {
     pub endpoint: String,
     pub auth: String,
     pub p256dh: String,
+}
+
+#[derive(Serialize)]
+pub struct Stats {
+    pub count: u64,
 }
