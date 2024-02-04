@@ -1,12 +1,12 @@
 <script type="ts">
-  import logo from "./assets/logo.png";
+  // import logo from "./assets/logo.png";
+  import logo from "./assets/logo.svg";
   import footerLogo from "./assets/ridgehacks.svg";
 
   import InnerLink from "./lib/InnerLink.svelte";
   import Section from "./lib/Section.svelte";
   import ListItem from "./lib/ListItem.svelte";
   import Link from "./lib/Link.svelte";
-  import Time from "./lib/Time.svelte";
   import Schedule from "./components/Schedule.svelte";
 </script>
 
