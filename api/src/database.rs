@@ -6,8 +6,8 @@ use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use tracing::{error, info};
 
-// Increment every time schema changes, even in dev
-const DATABASE_VERSION: u64 = 2;
+// Increment every time schema changes in a non backwards compatible way, even in dev
+const DATABASE_VERSION: u64 = 3;
 
 pub struct Db {
     inner: Mutex<Option<Connection>>,
@@ -80,7 +80,7 @@ impl Db {
 
     pub fn add_subscriber(&self, subscription: &PushSubscribe) -> Result<()> {
         self.lock().execute(
-            "INSERT INTO subscribers VALUES (?, ?, ?)",
+            include_str!("sql/insert_subscribers.sql"),
             [
                 &subscription.endpoint,
                 &subscription.p256dh,
