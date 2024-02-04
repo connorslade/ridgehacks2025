@@ -74,4 +74,10 @@ impl Db {
 
         Ok(())
     }
+
+    pub fn add_subscriber(&self, endpoint: &str) -> Result<()> {
+        self.lock()
+            .execute("INSERT INTO subscribers VALUES (?)", [endpoint])?;
+        Ok(())
+    }
 }

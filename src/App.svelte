@@ -125,6 +125,11 @@
       color: #fff;
       text-decoration: none;
       font-size: 20px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(0.9);
+      }
     }
 
     & .register {

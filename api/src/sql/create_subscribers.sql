@@ -1,3 +1,1 @@
-CREATE TABLE IF NOT EXISTS subscribers (
-    
-)
+CREATE TABLE IF NOT EXISTS subscribers (endpoint TEXT NOT NULL)
