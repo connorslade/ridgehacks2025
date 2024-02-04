@@ -1,5 +1,6 @@
 <script lang="ts">
   import Time from "../lib/Time.svelte";
+  import Section from "../lib/Section.svelte";
 
   import rawData from "../assets/schedule.json";
 
@@ -52,29 +53,31 @@
   );
 </script>
 
-<table class="schedule">
-  <thead>
-    <th class="time">Time</th>
-    <th class="activity">Main Areas</th>
-    <th class="activity">Room 701</th>
-    <th class="activity">PAC</th>
-  </thead>
+<Section title="Schedule">
+  <table class="schedule">
+    <thead>
+      <th class="time">Time</th>
+      <th class="activity">Main Areas</th>
+      <th class="activity">Room 701</th>
+      <th class="activity">PAC</th>
+    </thead>
 
-  {#each times as time}
-    <tr class={time.toString() == "10:00" ? "current-time" : ""}>
-      <td>
-        <Time hour={time.hour} minute={time.minute} />
-      </td>
-      {#each rooms as room}
-        {#if data[room][time.toString()]}
-          <td>{@html data[room][time.toString()]}</td>
-        {:else}
-          <td></td>
-        {/if}
-      {/each}
-    </tr>
-  {/each}
-</table>
+    {#each times as time}
+      <tr class={time.toString() == "10:00" ? "current-time" : ""}>
+        <td>
+          <Time hour={time.hour} minute={time.minute} />
+        </td>
+        {#each rooms as room}
+          {#if data[room][time.toString()]}
+            <td>{@html data[room][time.toString()]}</td>
+          {:else}
+            <td></td>
+          {/if}
+        {/each}
+      </tr>
+    {/each}
+  </table>
+</Section>
 
 <style lang="scss">
   @use "sass:color";

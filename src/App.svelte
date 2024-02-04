@@ -8,6 +8,7 @@
   import ListItem from "./lib/ListItem.svelte";
   import Link from "./lib/Link.svelte";
   import Schedule from "./components/Schedule.svelte";
+  import Updates from "./components/Updates.svelte";
 </script>
 
 <main>
@@ -26,31 +27,7 @@
   </div>
 
   <div class="sections">
-    <Section title="Updates" hidden={false}>
-      <p>
-        Click <a href="/">here</a> to subscribe to push notifications for future
-        updates.
-      </p>
-      <hr />
-
-      <ListItem title="6:14 PM">
-        Make sure you all have your team cards (the one with the numbers)! They
-        are used for judging and are really important. If you need a card see
-        Rachel in the Cafe.
-      </ListItem>
-      <ListItem title="10:12 AM">
-        Have a song request for the cafeteria playlist? Submit them <a href="/"
-          >here</a
-        >!
-      </ListItem>
-      <ListItem title="8:47 AM">
-        Find the opening ceremony slides <a href="/">here</a>.
-      </ListItem>
-      <ListItem title="6:39 AM">
-        Please make sure you have filled out the <a href="/">MLH Form</a> and
-        our <a href="/">Tally Form</a> in order to participate.
-      </ListItem>
-    </Section>
+    <Updates />
 
     <Section title="Ridgehacks 2024">
       <p>
@@ -63,9 +40,7 @@
       </p>
     </Section>
 
-    <Section title="Schedule">
-      <Schedule />
-    </Section>
+    <Schedule />
 
     <Section title="Event Details">
       <ListItem title="Date">April 1st, 2023</ListItem>
