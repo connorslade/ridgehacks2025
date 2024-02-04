@@ -99,6 +99,12 @@
     </Section>
 
     <Section title="Sponsors">
+      <p>
+        Looking to sponsor? Contact us at <a href="mailto:team@ridgehacks.us"
+          >team@ridgehacks.us</a
+        >.
+      </p>
+
       <h2>Emerald Sponsors</h2>
       <h2>Gold Sponsors</h2>
       <h2>Silver Sponsors</h2>
