@@ -1,10 +1,9 @@
 use afire::{extensions::RouteShorthands, Content, Server};
-use base64;
 use serde_json::json;
 use tracing::info;
 use web_push::{
-    ContentEncoding, IsahcWebPushClient, SubscriptionInfo, Urgency, VapidSignatureBuilder,
-    WebPushClient, WebPushMessageBuilder,
+    ContentEncoding, IsahcWebPushClient, SubscriptionInfo, Urgency, WebPushClient,
+    WebPushMessageBuilder,
 };
 
 use crate::{app::App, database::PushSubscribe};
@@ -24,16 +23,14 @@ pub fn attach(server: &mut Server<App>) {
         let subscription_info =
             SubscriptionInfo::new(&request.endpoint, &request.p256dh, &request.auth);
 
+        let signature = app
+            .signature
+            .clone()
+            .add_sub_info(&subscription_info)
+            .build()?;
+
         let mut builder = WebPushMessageBuilder::new(&subscription_info);
         builder.set_urgency(Urgency::High);
-
-        let signature = VapidSignatureBuilder::from_base64_no_sub(
-            &app.config.push_private_key,
-            base64::URL_SAFE,
-        )?
-        .add_sub_info(&subscription_info)
-        .build()?;
-
         builder.set_vapid_signature(signature);
         builder.set_payload(
             ContentEncoding::Aes128Gcm,

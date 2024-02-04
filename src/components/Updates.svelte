@@ -92,15 +92,21 @@
       </p>
     {:else}
       <p>
-        <strong>You are not subscribed to push notifications.</strong> If you
-        would like to subscribe, click
-        <span
-          on:click={subscribe}
-          on:keydown={unsubscribe}
-          role="button"
-          class="clickable"
-          tabindex="0">here</span
-        >.
+        <strong>You are not subscribed to push notifications.</strong>
+
+        {#if Notification.permission == "denied"}
+          You have blocked notifications. You can change this in your browser
+          settings.
+        {:else}
+          If you would like to subscribe, click
+          <span
+            on:click={subscribe}
+            on:keydown={unsubscribe}
+            role="button"
+            class="clickable"
+            tabindex="0">here</span
+          >.
+        {/if}
       </p>
     {/if}
   {:else}

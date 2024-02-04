@@ -22,7 +22,7 @@ fn main() -> Result<()> {
     trace::set_log_formatter(AfireLogger);
     trace::set_log_level(Level::Trace);
     let filter = filter::Targets::new()
-        .with_default(LevelFilter::TRACE)
+        .with_default(LevelFilter::INFO)
         .with_target("afire", LevelFilter::TRACE)
         .with_target("amplitude", LevelFilter::TRACE);
     tracing_subscriber::registry()

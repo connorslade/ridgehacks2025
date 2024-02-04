@@ -1,5 +1,6 @@
 use anyhow::Result;
 use tokio::runtime::{self, Runtime};
+use web_push::{PartialVapidSignatureBuilder, VapidSignatureBuilder};
 
 use crate::{config::Config, database::Db};
 
@@ -7,6 +8,7 @@ pub struct App {
     pub database: Db,
     pub config: Config,
     pub runtime: Runtime,
+    pub signature: PartialVapidSignatureBuilder,
 }
 
 impl App {
@@ -14,6 +16,9 @@ impl App {
         let connection = rusqlite::Connection::open(&config.database)?;
         let database = Db::new(connection);
         database.init()?;
+
+        let signature =
+            VapidSignatureBuilder::from_base64_no_sub(&config.push_private_key, base64::URL_SAFE)?;
 
         let runtime = runtime::Builder::new_multi_thread()
             .worker_threads(config.async_threads)
@@ -24,6 +29,7 @@ impl App {
             database,
             config,
             runtime,
+            signature,
         })
     }
 }
