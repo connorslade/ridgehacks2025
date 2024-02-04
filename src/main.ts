@@ -9,9 +9,11 @@ const app = new App({
   target: document.getElementById("app") as HTMLElement,
 });
 
-serviceWorker = await navigator.serviceWorker.register("service-worker.js");
-serviceWorker.pushManager.getSubscription().then((subscription) => {
-  subscribed.set(subscription !== null);
+navigator.serviceWorker.register("service-worker.js").then((registration) => {
+  serviceWorker = registration;
+  registration.pushManager.getSubscription().then((subscription) => {
+    subscribed.set(subscription !== null);
+  });
 });
 
 export default app;

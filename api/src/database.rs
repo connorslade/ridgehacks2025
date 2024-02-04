@@ -3,10 +3,11 @@ use std::process;
 use anyhow::Result;
 use parking_lot::{MappedMutexGuard, Mutex, MutexGuard};
 use rusqlite::Connection;
+use serde::Deserialize;
 use tracing::{error, info};
 
 // Increment every time schema changes, even in dev
-const DATABASE_VERSION: u64 = 1;
+const DATABASE_VERSION: u64 = 2;
 
 pub struct Db {
     inner: Mutex<Option<Connection>>,
@@ -52,6 +53,8 @@ impl Db {
                      just like delete the database and start over.",
                     DATABASE_VERSION, i
                 );
+                drop(this);
+                self.cleanup()?;
                 process::exit(1);
             }
         }
@@ -75,9 +78,28 @@ impl Db {
         Ok(())
     }
 
-    pub fn add_subscriber(&self, endpoint: &str) -> Result<()> {
-        self.lock()
-            .execute("INSERT INTO subscribers VALUES (?)", [endpoint])?;
+    pub fn add_subscriber(&self, subscription: &PushSubscribe) -> Result<()> {
+        self.lock().execute(
+            "INSERT INTO subscribers VALUES (?, ?, ?)",
+            [
+                &subscription.endpoint,
+                &subscription.p256dh,
+                &subscription.auth,
+            ],
+        )?;
         Ok(())
     }
+
+    pub fn remove_subscriber(&self, endpoint: &str) -> Result<()> {
+        self.lock()
+            .execute("DELETE FROM subscribers WHERE endpoint = ?", [endpoint])?;
+        Ok(())
+    }
+}
+
+#[derive(Deserialize)]
+pub struct PushSubscribe {
+    pub endpoint: String,
+    pub auth: String,
+    pub p256dh: String,
 }

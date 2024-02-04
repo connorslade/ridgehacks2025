@@ -16,31 +16,50 @@
   let processing = false;
   const publicKey =
     "BJbCtPkzTVAuzV1mptTaCYQcZr5Nok42qNgN7sTu2RI_ZBL0tYmq2MLaeI7K3khfUXFFAEl3-RxOZkrujijb7G8";
-  // Private key: TLLJmdpccdYruWA90CuyTZqVLLnjwQpL7gaZ798e4Cg
 
-  async function updateServer(endpoint: string, subscribe: boolean) {
-    const response = await fetch(
-      `/api/${subscribe ? "subscribe" : "unsubscribe"}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ endpoint }),
-      }
-    );
+  async function subscribeServer(subscription: PushSubscriptionJSON) {
+    console.log(subscription);
+    if (subscription.keys === undefined) {
+      console.error("Subscription keys are undefined");
+      return;
+    }
+
+    const response = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        endpoint: subscription.endpoint,
+        auth: subscription.keys.auth,
+        p256dh: subscription.keys.p256dh,
+      }),
+    });
+    if (!response.ok) console.error("Failed to update server:", response);
+  }
+
+  async function unsubscribeServer(endpoint: string) {
+    const response = await fetch("/api/unsubscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ endpoint }),
+    });
     if (!response.ok) console.error("Failed to update server:", response);
   }
 
   async function subscribe() {
     if (!serviceWorker) return;
 
+    // Notification.requestPermission();
+
     const key = urlBase64ToUint8Array(publicKey);
     let subscription = await serviceWorker.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: key,
     });
-    await updateServer(subscription.endpoint, true);
+    await subscribeServer(subscription.toJSON());
     subscribed.update(() => true);
   }
 
@@ -49,7 +68,7 @@
 
     let subscription = await serviceWorker.pushManager.getSubscription();
     if (subscription) {
-      await updateServer(subscription.endpoint, false);
+      await unsubscribeServer(subscription.endpoint);
       await subscription.unsubscribe();
       subscribed.update(() => false);
     }
