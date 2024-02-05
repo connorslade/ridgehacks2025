@@ -19,9 +19,9 @@ checksum = "f26201604c87b1e01bd3d98f8d5d9a8fcbb815e8cedb41ffccbeb4bf593a35fe"
 
 [[package]]
 name = "afire"
-version = "3.0.0-alpha.2"
+version = "3.0.0-alpha.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72419483d0ad88c19a000cbe0d1df78cf7cc7588f9d2829dbc7fbf99dce9d843"
+checksum = "2bd0c7f4de8aa59494eb9027417044afa1d84155f3c3bcfbfb7107227a98364a"
 
 [[package]]
 name = "ahash"

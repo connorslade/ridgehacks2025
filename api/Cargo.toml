@@ -5,7 +5,7 @@ edition = "2021"
 
 
 [dependencies]
-afire = { version = "3.0.0-alpha.2", features = [
+afire = { version = "3.0.0-alpha.3", features = [
     "extensions",
     "tracing",
 ], default-features = false }

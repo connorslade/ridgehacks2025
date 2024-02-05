@@ -32,10 +32,10 @@ fn main() -> Result<()> {
     dotenv_override().unwrap();
 
     let config = Config::from_env()?;
-    let threads = config.threads;
 
-    let mut server = Server::<App>::new(&config.host, config.port).state(App::new(config)?);
-    server.thread_pool.resize(threads);
+    let mut server = Server::<App>::new(&config.host, config.port)
+        .workers(config.threads)
+        .state(App::new(config)?);
 
     RequestLogger.attach(&mut server);
     routes::attach(&mut server);
