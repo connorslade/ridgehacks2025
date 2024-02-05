@@ -20,10 +20,17 @@
     margin-bottom: 20px;
     scroll-margin-top: 20px;
     color: #000;
+    overflow-x: auto;
 
     &:nth-child(odd) {
       background-color: #49808a;
       color: #fff;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .section {
+      margin-bottom: 10px;
     }
   }
 </style>

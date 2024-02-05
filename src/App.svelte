@@ -103,12 +103,15 @@
 <style lang="scss">
   @use "style/typefaces.scss";
 
+  main {
+    padding: 0 20px 0 20px;
+  }
+
   .logo {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     max-width: 600px;
-    width: 60vw;
     margin-bottom: -20px;
   }
 
@@ -118,8 +121,9 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
+    margin: 20px;
     margin-bottom: 30px;
+    line-height: 1em;
 
     & :global(a) {
       color: #fff;
@@ -139,7 +143,6 @@
 
   .sections {
     margin: 0;
-    padding: 20px;
     max-width: 1000px;
 
     position: relative;
@@ -168,6 +171,12 @@
     & .logo {
       width: 300px;
       margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    main {
+      padding: 0 10px 0 10px;
     }
   }
 </style>

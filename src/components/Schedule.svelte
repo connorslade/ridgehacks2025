@@ -86,6 +86,7 @@
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    min-width: 600px;
 
     & th,
     & td {
