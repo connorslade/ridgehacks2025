@@ -13,6 +13,16 @@
   updateHidden();
   setInterval(updateHidden, 10);
 
+  let notificationPermission = Notification.permission;
+  navigator.permissions
+    .query({ name: "notifications" })
+    .then((result) =>
+      result.addEventListener(
+        "change",
+        () => (notificationPermission = Notification.permission)
+      )
+    );
+
   let processing = false;
   const publicKey =
     "BJbCtPkzTVAuzV1mptTaCYQcZr5Nok42qNgN7sTu2RI_ZBL0tYmq2MLaeI7K3khfUXFFAEl3-RxOZkrujijb7G8";
@@ -92,7 +102,7 @@
       <p>
         <strong>You are not subscribed to push notifications.</strong>
 
-        {#if Notification.permission == "denied"}
+        {#if notificationPermission == "denied"}
           You have blocked notifications. You can change this in your browser
           settings.
         {:else}
