@@ -5,6 +5,7 @@ use parking_lot::{MappedMutexGuard, Mutex, MutexGuard};
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use tracing::{error, info};
+use web_push::SubscriptionInfo;
 
 // Increment every time schema changes in a non backwards compatible way, even in dev
 const DATABASE_VERSION: u64 = 3;
@@ -96,7 +97,26 @@ impl Db {
         Ok(())
     }
 
-    pub fn get_stats(&self) -> Result<Stats> {
+    pub fn get_subscribers(&self) -> Result<Vec<PushSubscribe>> {
+        let this = self.lock();
+        let mut stmt = this.prepare("SELECT endpoint, p256dh, auth FROM subscribers")?;
+        let rows = stmt.query_map([], |row| {
+            Ok(PushSubscribe {
+                endpoint: row.get(0)?,
+                p256dh: row.get(1)?,
+                auth: row.get(2)?,
+            })
+        })?;
+
+        let mut out = Vec::new();
+        for row in rows {
+            out.push(row?);
+        }
+
+        Ok(out)
+    }
+
+    pub fn stats(&self) -> Result<Stats> {
         let count = self
             .lock()
             .query_row("SELECT COUNT(*) FROM subscribers", [], |row| row.get(0))?;
@@ -109,6 +129,12 @@ pub struct PushSubscribe {
     pub endpoint: String,
     pub auth: String,
     pub p256dh: String,
+}
+
+impl Into<SubscriptionInfo> for PushSubscribe {
+    fn into(self) -> SubscriptionInfo {
+        SubscriptionInfo::new(&self.endpoint, &self.p256dh, &self.auth)
+    }
 }
 
 #[derive(Serialize)]

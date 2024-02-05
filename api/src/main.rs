@@ -24,7 +24,7 @@ fn main() -> Result<()> {
     let filter = filter::Targets::new()
         .with_default(LevelFilter::INFO)
         .with_target("afire", LevelFilter::TRACE)
-        .with_target("amplitude", LevelFilter::TRACE);
+        .with_target("api", LevelFilter::TRACE);
     tracing_subscriber::registry()
         .with(filter)
         .with(tracing_subscriber::fmt::layer())

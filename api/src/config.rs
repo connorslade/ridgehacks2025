@@ -9,6 +9,7 @@ pub struct Config {
     pub async_threads: usize,
     pub database: PathBuf,
 
+    pub publish_token: String,
     pub push_public_key: String,
     pub push_private_key: String,
 }
@@ -21,6 +22,8 @@ impl Config {
             threads: env::var("THREADS")?.parse()?,
             async_threads: env::var("ASYNC_THREADS")?.parse()?,
             database: env::var("DATABASE")?.into(),
+
+            publish_token: env::var("PUBLISH_TOKEN")?,
             push_public_key: env::var("PUSH_PUBLIC_KEY")?,
             push_private_key: env::var("PUSH_PRIVATE_KEY")?,
         })

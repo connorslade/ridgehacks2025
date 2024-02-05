@@ -5,7 +5,7 @@ use crate::App;
 
 pub fn attach(server: &mut Server<App>) {
     server.get("/api/stats", |ctx| {
-        let stats = ctx.app().database.get_stats()?;
+        let stats = ctx.app().database.stats()?;
         ctx.text(json!(stats)).content(Content::JSON).send()?;
         Ok(())
     });
