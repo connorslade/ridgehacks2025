@@ -1,0 +1,21 @@
+{
+  "name": "Ridgehacks 2024",
+  "short_name": "Ridgehacks",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "type": "image/svg",
+      "sizes": "150x150",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#383d36"
+}

@@ -4,6 +4,7 @@
   import { debug, eventDay } from "../assets/data.json";
   import ListItem from "../lib/ListItem.svelte";
   import Section from "../lib/Section.svelte";
+  import Link from "../lib/Link.svelte";
 
   // If it is more than a day before the event, hide the updates section
   let hidden = true;
@@ -13,16 +14,19 @@
   updateHidden();
   setInterval(updateHidden, 10);
 
-  let notificationPermission = Notification.permission;
-  navigator.permissions
-    .query({ name: "notifications" })
-    .then((result) =>
-      result.addEventListener(
-        "change",
-        () => (notificationPermission = Notification.permission)
-      )
-    );
-
+  let pushEnabled = "serviceWorker" in navigator && "PushManager" in window;
+  let notificationPermission = "default";
+  if (pushEnabled) {
+    notificationPermission = Notification.permission;
+    navigator.permissions
+      .query({ name: "notifications" })
+      .then((result) =>
+        result.addEventListener(
+          "change",
+          () => (notificationPermission = Notification.permission)
+        )
+      );
+  }
   let processing = false;
   const publicKey =
     "BJbCtPkzTVAuzV1mptTaCYQcZr5Nok42qNgN7sTu2RI_ZBL0tYmq2MLaeI7K3khfUXFFAEl3-RxOZkrujijb7G8";
@@ -84,7 +88,7 @@
 </script>
 
 <Section title="Updates" hidden={hidden && !debug}>
-  {#if "serviceWorker" in navigator && "PushManager" in window}
+  {#if pushEnabled}
     {#if $subscribed}
       <p>
         <strong>You are subscribed to push notifications.</strong> If you would
@@ -119,8 +123,10 @@
     {/if}
   {:else}
     <p>
-      Your browser does not support push notifications. This may be because it
-      does not support service workers or the Push API.
+      Your browser does not support push notifications. If you are on iPhone you
+      will need to <Link href="https://pushalert.co/documentation/ios-web-push"
+        >add this site to your home screen</Link
+      > to subscribe to push notifications.
     </p>
   {/if}
 
@@ -148,7 +154,8 @@
 <style lang="scss">
   .clickable {
     cursor: pointer;
-    text-decoration: underline wavy;
+    text-decoration-line: underline;
+    text-decoration: wavy;
   }
 
   .processing {
