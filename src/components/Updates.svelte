@@ -154,8 +154,8 @@
 <style lang="scss">
   .clickable {
     cursor: pointer;
-    text-decoration-line: underline;
     text-decoration: wavy;
+    text-decoration-line: underline;
   }
 
   .processing {

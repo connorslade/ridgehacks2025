@@ -9,9 +9,9 @@
   }
 
   function to12Hour(hour: number, minute: number): string {
-    hour %= 12;
-    if (hour === 0) hour = 12;
-    return `${hour}:${pad(minute)} ${hour < 12 ? "AM" : "PM"}`;
+    let newHour = hour % 12;
+    if (newHour === 0) newHour = 12;
+    return `${newHour}:${pad(minute)} ${hour < 12 ? "AM" : "PM"}`;
   }
 
   function to24Hour(hour: number, minute: number): string {
