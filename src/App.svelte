@@ -23,15 +23,18 @@
     <InnerLink href="#map">Map</InnerLink>
     <InnerLink href="#sponsors">Sponsors</InnerLink>
     <InnerLink href="#organizers">Organizers</InnerLink>
-    <a href="/" class="register">Register</a>
+    <Link
+      href="https://forms.gle/mHgRcivPSz6Xdpxb9"
+      style="color: var(--accent-color)">Register</Link
+    >
   </div>
 
   <div class="sections">
-    <Updates />
+    <!-- <Updates /> -->
 
     <Section title="Ridgehacks 2024">
       <p>
-        Ridgehacks 2023 is Ridge High School's premier annual hackathon led by
+        Ridgehacks 2024 is Ridge High School's premier annual hackathon led by
         the <Link href="https://ridgecompsci.club"
           >Ridge Computer Science Club</Link
         >. Following a single day, 12-hour hacking schedule, Ridgehacks offers a
@@ -40,15 +43,17 @@
       </p>
     </Section>
 
-    <Schedule />
+    <!-- <Schedule /> -->
+
+    <Section title="Schedule">
+      <p>More information coming soon...</p>
+    </Section>
 
     <Section title="Event Details">
-      <ListItem title="Date">April 1st, 2023</ListItem>
+      <ListItem title="Date">April 6th, 2024</ListItem>
       <ListItem title="Who can attend">
         Any middle school or high school student (grades 6-12) who's down to
-        make something awesome. Or anything tech, or programming related really
-        (please reach out if you are an elementary student interested in
-        attending).
+        make something awesome. Or anything tech, or programming related really.
       </ListItem>
       <ListItem title="Cost to attend">Free!</ListItem>
       <ListItem title="Location">
@@ -69,21 +74,18 @@
       </p>
     </Section>
 
-    <Section title="Map">
+    <!-- <Section title="Map">
       <p>todo&hellip;</p>
-    </Section>
+    </Section> -->
 
     <Section title="Sponsors">
       <p>
-        Looking to sponsor? Contact us at <a href="mailto:team@ridgehacks.us"
-          >team@ridgehacks.us</a
+        Looking to sponsor? Contact us at <a
+          href="mailto:ridgecompsci@gmail.com">ridgecompsci@gmail.com</a
         >.
       </p>
 
-      <h2>Emerald Sponsors</h2>
-      <h2>Gold Sponsors</h2>
-      <h2>Silver Sponsors</h2>
-      <h2>Bronze Sponsors</h2>
+      <p>More information coming soon...</p>
     </Section>
 
     <Section title="Organizers">
@@ -94,9 +96,9 @@
   <div class="footer">
     <img src={footerLogo} class="logo" alt="Ridgehacks 2024" />
 
-    <p>Ridge High School Hackathon, April 1st</p>
+    <p>Ridge High School Hackathon, April 6st</p>
     <p>268 S Finley Ave, Basking Ridge, NJ 07920</p>
-    <a href="mailto:team@ridgehacks.us">team@ridgehacks.us</a>
+    <a href="mailto:ridgecompsci@gmail.com">ridgecompsci@gmail.com</a>
   </div>
 </main>
 
@@ -134,10 +136,6 @@
       &:hover {
         transform: scale(0.9);
       }
-    }
-
-    & .register {
-      color: var(--accent-color);
     }
   }
 
