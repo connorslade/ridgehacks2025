@@ -10,6 +10,7 @@
   import Schedule from "./components/Schedule.svelte";
   import Map from "./components/Map.svelte";
   import Time from "./lib/Time.svelte";
+  import Organizers from "./components/Organizers.svelte";
 </script>
 
 <main>
@@ -86,9 +87,7 @@
       <p>More information coming soon...</p>
     </Section>
 
-    <Section title="Organizers">
-      <p>More information coming soon...</p>
-    </Section>
+    <Organizers />
   </div>
 
   <div class="footer">
