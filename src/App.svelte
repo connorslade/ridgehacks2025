@@ -1,6 +1,6 @@
 <script type="ts">
-  // import logo from "./assets/logo.png";
-  import logo from "./assets/logo.svg";
+  import logo from "./assets/logo.png";
+  // import logo from "./assets/logo.svg";
   import footerLogo from "./assets/ridgehacks.svg";
 
   import InnerLink from "./lib/InnerLink.svelte";
@@ -9,6 +9,7 @@
   import Link from "./lib/Link.svelte";
   import Schedule from "./components/Schedule.svelte";
   import Map from "./components/Map.svelte";
+  import Time from "./lib/Time.svelte";
 </script>
 
 <main>
@@ -36,8 +37,9 @@
         the <Link href="https://ridgecompsci.club"
           >Ridge Computer Science Club</Link
         >. Following a single day, 12-hour hacking schedule, Ridgehacks offers a
-        free hackathon for Middle and High School Students from 8:00 AM until
-        10:00 PM.
+        free hackathon for Middle and High School Students from <Time
+          hour={8}
+        /> until <Time hour={22} />.
       </p>
     </Section>
 
@@ -109,6 +111,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     max-width: 600px;
     margin-bottom: -20px;
   }

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { settings } from "../settings";
   import Time from "../lib/Time.svelte";
   import Section from "../lib/Section.svelte";
 
@@ -17,6 +18,13 @@
 
   function addDateHours(date: Date, hours: number): Date {
     return new Date(date.getTime() + hours * 60 * 60 * 1000);
+  }
+
+  function toggleTimeFormat() {
+    settings.update((s) => {
+      s.militaryTime = !s.militaryTime;
+      return s;
+    });
   }
 
   class EventTime {
@@ -85,6 +93,8 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-missing-attribute -->
 <Section title="Schedule">
   <table class="schedule">
     <thead>
@@ -109,6 +119,11 @@
       </tr>
     {/each}
   </table>
+
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <a class="format-toggle" on:click={toggleTimeFormat}>
+    Switch to {$settings.militaryTime ? "12" : "24"} hour time.
+  </a>
 </Section>
 
 <style lang="scss">
@@ -142,5 +157,15 @@
     .time {
       width: 100px;
     }
+  }
+
+  .format-toggle {
+    display: block;
+    font-size: 0.8em;
+    color: #ffffff8c;
+    margin-bottom: 0;
+    margin-top: 12.8px;
+    width: max-content;
+    cursor: pointer;
   }
 </style>
