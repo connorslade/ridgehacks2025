@@ -2,7 +2,7 @@
   import Time from "../lib/Time.svelte";
   import Section from "../lib/Section.svelte";
 
-  import { eventTimezone } from "../assets/data.json";
+  import { eventTimezone, eventDay } from "../assets/data.json";
   import rawData from "../assets/schedule.json";
 
   interface ScheduleData {
@@ -11,7 +11,13 @@
     };
   }
 
-  const data: ScheduleData = rawData;
+  function correctTimeZone(date: Date): Date {
+    return new Date(date.getTime() + eventTimezone * 3600 * 1000);
+  }
+
+  function addDateHours(date: Date, hours: number): Date {
+    return new Date(date.getTime() + hours * 60 * 60 * 1000);
+  }
 
   class EventTime {
     hour: number;
@@ -22,9 +28,8 @@
       this.minute = minute;
     }
 
-    static now(): EventTime {
-      let now = new Date(new Date().getTime() + eventTimezone * 3600 * 1000);
-      return new EventTime(now.getHours(), now.getMinutes());
+    static fromDate(date: Date): EventTime {
+      return new EventTime(date.getHours(), date.getMinutes());
     }
 
     static fromString(time: string): EventTime {
@@ -42,6 +47,9 @@
     }
   }
 
+  const data: ScheduleData = rawData;
+  const eventDate = correctTimeZone(new Date(eventDay)); // 1707841550 * 1000
+
   let rooms = Object.keys(data);
   let times: EventTime[] = [];
 
@@ -56,12 +64,18 @@
       times.findIndex((other) => time.compareTo(other) === 0) === index
   );
 
-  let currentActivity = 0;
+  let currentActivity = -1;
   refreshActivity();
-  setTimeout(refreshActivity, 1);
+  setTimeout(refreshActivity, 10);
 
   function refreshActivity() {
-    let now = EventTime.now();
+    let nowRaw = correctTimeZone(new Date());
+    let now = EventTime.fromDate(nowRaw);
+    if (nowRaw < eventDate || nowRaw > addDateHours(eventDate, 12)) {
+      currentActivity = -1;
+      return;
+    }
+
     for (let i = times.length - 1; i >= 0; i--) {
       if (times[i].compareTo(now) < 0) {
         currentActivity = i;
