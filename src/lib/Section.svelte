@@ -22,7 +22,7 @@
     color: #000;
     overflow-x: auto;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: #49808a;
       color: #fff;
     }

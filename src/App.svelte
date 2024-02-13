@@ -8,7 +8,6 @@
   import ListItem from "./lib/ListItem.svelte";
   import Link from "./lib/Link.svelte";
   import Schedule from "./components/Schedule.svelte";
-  import Updates from "./components/Updates.svelte";
 </script>
 
 <main>
@@ -30,8 +29,6 @@
   </div>
 
   <div class="sections">
-    <Updates />
-
     <Section title="Ridgehacks 2024">
       <p>
         Ridgehacks 2024 is Ridge High School's premier annual hackathon led by
