@@ -27,8 +27,8 @@
 <style lang="scss">
   .organizers {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 48px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
     justify-items: center;
     padding-bottom: 10px;
   }

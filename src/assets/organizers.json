@@ -1,12 +1,12 @@
 [
   { "name": "Brandon Li", "role": "Club President", "image": "brandon.jpg" },
   { "name": "Connor Slade", "role": "Director of Technology", "image": "connor.jpg" },
-  { "name": "Hanna Chee", "role": "Ridgehacks Director", "image": "" },
-  { "name": "Tejas Chakrapani", "role": "Ridgehacks Event Coordinator", "image": "" },
-  { "name": "Matthias Masiero", "role": "Secretary", "image": "" },
   { "name": "Eric Zhang", "role": "Treasurer", "image": "" },
+  { "name": "Grace Tan", "role": "Outreach Director", "image": "" },
+  { "name": "Hanna Chee", "role": "Ridgehacks Director", "image": "" },
   { "name": "Joseph Chan", "role": "Education Director", "image": "" },
+  { "name": "Matthias Masiero", "role": "Secretary", "image": "" },
+  { "name": "Tejas Chakrapani", "role": "Ridgehacks Event Coordinator", "image": "" },
   { "name": "Vienna Li", "role": "Education Director", "image": "" },
-  { "name": "Wesley Chen", "role": "Technology Director", "image": "" },
-  { "name": "Grace Tan", "role": "Outreach Director", "image": "" }
+  { "name": "Wesley Chen", "role": "Technology Director", "image": "" }
 ]
