@@ -12,7 +12,7 @@
   const updateHidden = () =>
     (hidden = new Date().getTime() / 1000 < eventDay - 24 * 60 * 60);
   updateHidden();
-  setInterval(updateHidden, 10);
+  setInterval(updateHidden, 60);
 
   let pushEnabled = "serviceWorker" in navigator && "PushManager" in window;
   let notificationPermission = "default";

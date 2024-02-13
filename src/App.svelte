@@ -30,7 +30,7 @@
   </div>
 
   <div class="sections">
-    <!-- <Updates /> -->
+    <Updates />
 
     <Section title="Ridgehacks 2024">
       <p>
@@ -43,7 +43,7 @@
       </p>
     </Section>
 
-    <!-- <Schedule /> -->
+    <Schedule />
 
     <Section title="Schedule">
       <p>More information coming soon...</p>
@@ -74,14 +74,14 @@
       </p>
     </Section>
 
-    <!-- <Section title="Map">
+    <Section title="Map">
       <p>todo&hellip;</p>
-    </Section> -->
+    </Section>
 
     <Section title="Sponsors">
       <p>
-        Looking to sponsor? Contact us at <a
-          href="mailto:ridgecompsci@gmail.com">ridgecompsci@gmail.com</a
+        Looking to sponsor? Contact us at <a href="mailto:team@ridgehacks.us"
+          >team@ridgehacks.us</a
         >.
       </p>
 
@@ -98,7 +98,7 @@
 
     <p>Ridge High School Hackathon, April 6st</p>
     <p>268 S Finley Ave, Basking Ridge, NJ 07920</p>
-    <a href="mailto:ridgecompsci@gmail.com">ridgecompsci@gmail.com</a>
+    <a href="mailto:team@ridgehacks.us">team@ridgehacks.us</a>
   </div>
 </main>
 
