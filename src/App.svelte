@@ -8,6 +8,7 @@
   import ListItem from "./lib/ListItem.svelte";
   import Link from "./lib/Link.svelte";
   import Schedule from "./components/Schedule.svelte";
+  import Map from "./components/Map.svelte";
 </script>
 
 <main>
@@ -72,7 +73,7 @@
     </Section>
 
     <Section title="Map">
-      <p>todo&hellip;</p>
+      <Map />
     </Section>
 
     <Section title="Sponsors">
