@@ -72,9 +72,7 @@
       </p>
     </Section>
 
-    <Section title="Map">
-      <Map />
-    </Section>
+    <Map />
 
     <Section title="Sponsors">
       <p>
@@ -87,7 +85,7 @@
     </Section>
 
     <Section title="Organizers">
-      <p>todo&hellip;</p>
+      <p>More information coming soon...</p>
     </Section>
   </div>
 
