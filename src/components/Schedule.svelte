@@ -2,6 +2,7 @@
   import Time from "../lib/Time.svelte";
   import Section from "../lib/Section.svelte";
 
+  import { eventTimezone } from "../assets/data.json";
   import rawData from "../assets/schedule.json";
 
   interface ScheduleData {
@@ -19,6 +20,11 @@
     constructor(hour: number, minute: number) {
       this.hour = hour;
       this.minute = minute;
+    }
+
+    static now(): EventTime {
+      let now = new Date(new Date().getTime() + eventTimezone * 3600 * 1000);
+      return new EventTime(now.getHours(), now.getMinutes());
     }
 
     static fromString(time: string): EventTime {
@@ -39,11 +45,9 @@
   let rooms = Object.keys(data);
   let times: EventTime[] = [];
 
-  for (let key in data) {
-    for (let time in data[key as keyof typeof data]) {
+  for (let key in data)
+    for (let time in data[key as keyof typeof data])
       times.push(EventTime.fromString(time));
-    }
-  }
 
   times.sort((a, b) => a.compareTo(b));
 
@@ -51,6 +55,20 @@
     (time, index) =>
       times.findIndex((other) => time.compareTo(other) === 0) === index
   );
+
+  let currentActivity = 0;
+  refreshActivity();
+  setTimeout(refreshActivity, 1);
+
+  function refreshActivity() {
+    let now = EventTime.now();
+    for (let i = times.length - 1; i >= 0; i--) {
+      if (times[i].compareTo(now) < 0) {
+        currentActivity = i;
+        break;
+      }
+    }
+  }
 </script>
 
 <Section title="Schedule">
@@ -62,8 +80,8 @@
       <th class="activity">PAC</th>
     </thead>
 
-    {#each times as time}
-      <tr class={time.toString() == "10:00" ? "current-time" : ""}>
+    {#each times as time, idx}
+      <tr class:current-time={idx == currentActivity}>
         <td>
           <Time hour={time.hour} minute={time.minute} />
         </td>
