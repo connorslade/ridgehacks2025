@@ -8,13 +8,7 @@
   <div class="organizers">
     {#each organizers as organizer}
       <div class="organizer">
-        <img
-          class="image"
-          src={organizer.image === ""
-            ? "https://picsum.photos/200"
-            : `/organizers/${organizer.image}`}
-          alt=""
-        />
+        <!-- <img class="image" src={`/organizers/${organizer.image}`} alt="" /> -->
         <div>
           <p class="name">{organizer.name}</p>
           <p class="role">{organizer.role}</p>

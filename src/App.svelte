@@ -44,11 +44,11 @@
       </p>
     </Section>
 
-    <Schedule />
+    <!-- <Schedule /> -->
 
-    <!-- <Section title="Schedule">
+    <Section title="Schedule">
       <p>More information coming soon...</p>
-    </Section> -->
+    </Section>
 
     <Section title="Event Details">
       <ListItem title="Date">April 6th, 2024</ListItem>
