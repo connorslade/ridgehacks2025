@@ -44,11 +44,7 @@
       </p>
     </Section>
 
-    <!-- <Schedule /> -->
-
-    <Section title="Schedule">
-      <p>More information coming soon...</p>
-    </Section>
+    <Schedule />
 
     <Section title="Event Details">
       <ListItem title="Date">April 6th, 2024</ListItem>
