@@ -33,6 +33,12 @@
 
   <div class="sections">
     <Section title="Ridgehacks 2024">
+      <h2>
+        Registration is currently open. Fill out <Link
+          href="https://forms.gle/mHgRcivPSz6Xdpxb9">this form</Link
+        > to sign up.
+      </h2>
+
       <p>
         Ridgehacks 2024 is Ridge High School's premier annual hackathon led by
         the <Link href="https://ridgecompsci.club"
@@ -49,8 +55,8 @@
     <Section title="Event Details">
       <ListItem title="Date">April 6th, 2024</ListItem>
       <ListItem title="Who can attend">
-        Any middle school or high school student (grades 6-12) who's down to
-        make something awesome. Or anything tech, or programming related really.
+        Any high school or college students student who's down to make something
+        awesome. Or anything tech, or programming related really.
       </ListItem>
       <ListItem title="Cost to attend">Free!</ListItem>
       <ListItem title="Location">
