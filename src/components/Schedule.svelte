@@ -51,7 +51,7 @@
     }
 
     toString(): string {
-      return `${this.hour}:${this.minute.toString().padStart(2, "0")}`;
+      return `${this.hour.toString().padStart(2, "0")}:${this.minute.toString().padStart(2, "0")}`;
     }
   }
 
@@ -69,7 +69,7 @@
 
   times = times.filter(
     (time, index) =>
-      times.findIndex((other) => time.compareTo(other) === 0) === index
+      times.findIndex((other) => time.compareTo(other) === 0) === index,
   );
 
   let currentActivity = -1;
