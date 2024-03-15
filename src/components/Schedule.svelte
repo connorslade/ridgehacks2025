@@ -37,7 +37,8 @@
     }
 
     static fromDate(date: Date): EventTime {
-      return new EventTime(date.getHours(), date.getMinutes());
+      date = correctTimeZone(date);
+      return new EventTime(date.getUTCHours(), date.getUTCMinutes());
     }
 
     static fromString(time: string): EventTime {
@@ -56,7 +57,7 @@
   }
 
   const data: ScheduleData = rawData;
-  const eventDate = correctTimeZone(new Date(eventDay)); // 1707841550 * 1000
+  const eventDate = new Date(eventDay); // 1707841550 * 1000
 
   let rooms = Object.keys(data);
   let times: EventTime[] = [];
@@ -69,7 +70,7 @@
 
   times = times.filter(
     (time, index) =>
-      times.findIndex((other) => time.compareTo(other) === 0) === index,
+      times.findIndex((other) => time.compareTo(other) === 0) === index
   );
 
   let currentActivity = -1;
@@ -77,7 +78,7 @@
   setTimeout(refreshActivity, 10);
 
   function refreshActivity() {
-    let nowRaw = correctTimeZone(new Date());
+    let nowRaw = new Date();
     let now = EventTime.fromDate(nowRaw);
     if (nowRaw < eventDate || nowRaw > addDateHours(eventDate, 12)) {
       currentActivity = -1;
@@ -85,6 +86,7 @@
     }
 
     for (let i = times.length - 1; i >= 0; i--) {
+      console.log(`Comparing ${times[i].toString()} to ${now.toString()}`);
       if (times[i].compareTo(now) < 0) {
         currentActivity = i;
         break;

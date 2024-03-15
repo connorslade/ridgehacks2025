@@ -12,14 +12,16 @@
   "Lecture Hall": {
     "11:00": "Unity Workshop",
     "12:00": "Workshop",
+    "13:00": "Machine Learning and Data Science Workshop",
     "14:00": "Kahoot",
-    "15:00": "Workshop",
-    "17:00": "Workshop",
+    "15:00": "Computer Repair Workshop",
+    "16:00": "Chess and Information Theory Workshop",
+    "17:00": "Web Dev and Css Workshop",
     "20:00": "Guest Speaker"
   },
   "PAC": {
     "08:00": "Doors Open",
     "08:30": "Opening Ceremony",
-    "09:15": "Presentations"
+    "21:15": "Presentations"
   }
 }
