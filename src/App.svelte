@@ -1,6 +1,6 @@
 <script type="ts">
-  import logo from "./assets/logo.png";
-  // import logo from "./assets/logo.svg";
+  // import logo from "./assets/logo.png";
+  import logo from "./assets/logo.svg";
   import footerLogo from "./assets/ridgehacks.svg";
 
   import InnerLink from "./lib/InnerLink.svelte";
@@ -11,6 +11,8 @@
   import Map from "./components/Map.svelte";
   import Time from "./lib/Time.svelte";
   import Organizers from "./components/Organizers.svelte";
+  import Sponsor from "./lib/Sponsor.svelte";
+  import Sponsors from "./components/Sponsors.svelte";
 </script>
 
 <main>
@@ -50,11 +52,7 @@
       </p>
     </Section>
 
-    <!-- <Schedule /> -->
-
-    <Section title="Schedule">
-      <p>More information coming soon...</p>
-    </Section>
+    <Schedule />
 
     <Section title="Event Details">
       <ListItem title="Date">April 6th, 2024</ListItem>
@@ -68,7 +66,7 @@
       </ListItem>
     </Section>
 
-    <Section title="What is a Hackathon">
+    <Section title="What is a Hackathon" dark={true}>
       <p>
         A hackathon is an event where students individually or collaboratively
         create innovative solutions with technology, often using hardware,
@@ -83,15 +81,7 @@
 
     <Map />
 
-    <Section title="Sponsors">
-      <p>
-        Looking to sponsor? Contact us at <a href="mailto:team@ridgehacks.us"
-          >team@ridgehacks.us</a
-        >.
-      </p>
-
-      <p>More information coming soon...</p>
-    </Section>
+    <Sponsors />
 
     <Organizers />
   </div>

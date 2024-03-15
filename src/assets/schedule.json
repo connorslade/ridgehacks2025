@@ -1,24 +1,27 @@
 {
   "Main Areas": {
-    "8:00": "Check-in",
-    "9:00": "Hacking Begins",
-    "10:00": "Breakfast",
-    "13:00": "Lunch (and Super Smash Bros Tournament)",
-    "18:00": "Dinner (and chess tournament)",
-    "20:00": "Hardstop Hacking",
+    "09:00": "Breakfast & Team Making",
+    "10:00": "Hacking begins",
+    "13:00": "Lunch",
+    "16:00": "Chess & Workshop",
+    "18:00": "Dinner",
+    "19:00": "Mario Kart",
+    "20:00": "Hacking Ends",
     "22:00": "Event Ends"
   },
-  "Room 701": {
-    "10:00": "Consumer Repair Workshop sponsored by Tulls Automotive",
-    "11:00": "Open CV Workshop sponsored by Ridge Marketing",
-    "16:00": "Cybersecurity Workshop sponsored by the Bernards PBA",
-    "18:00": "Judges Meeting",
-    "19:00": "CS as Job? Experiences from Industry by Chad Wiedemann"
+  "Lecture Hall": {
+    "11:00": "Unity Workshop",
+    "12:00": "Workshop",
+    "13:00": "Machine Learning and Data Science Workshop",
+    "14:00": "Kahoot",
+    "15:00": "Computer Repair Workshop",
+    "16:00": "Chess and Information Theory Workshop",
+    "17:00": "Web Dev and Css Workshop",
+    "20:00": "Guest Speaker"
   },
   "PAC": {
-    "8:15": "Opening Ceremony",
-    "9:00": "EEC Speaker",
-    "20:45": "Finalist Presentations",
-    "21:45": "Closing Ceremony"
+    "08:00": "Doors Open",
+    "08:30": "Opening Ceremony",
+    "21:15": "Presentations"
   }
 }

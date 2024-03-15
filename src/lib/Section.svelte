@@ -1,10 +1,11 @@
 <script lang="ts">
   export let title: string;
   export let hidden: boolean = false;
+  export let dark: boolean = false;
   let id = title.toLowerCase().replace(/\s/g, "-");
 </script>
 
-<div {id} style:display={hidden ? "none" : "block"} class="section">
+<div {id} style:display={hidden ? "none" : "block"} class:dark class="section">
   <h1>{title}</h1>
   <slot />
 </div>
@@ -22,7 +23,7 @@
     color: #000;
     overflow-x: auto;
 
-    &:nth-child(even) {
+    &.dark {
       background-color: #49808a;
       color: #fff;
     }
