@@ -1,6 +1,6 @@
 <script type="ts">
-  import logo from "./assets/logo.png";
-  // import logo from "./assets/logo.svg";
+  // import logo from "./assets/logo.png";
+  import logo from "./assets/logo.svg";
   import footerLogo from "./assets/ridgehacks.svg";
 
   import InnerLink from "./lib/InnerLink.svelte";
