@@ -97,7 +97,7 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-missing-attribute -->
-<Section title="Schedule">
+<Section title="Schedule" dark={true}>
   <table class="schedule">
     <thead>
       <th class="time">Time</th>

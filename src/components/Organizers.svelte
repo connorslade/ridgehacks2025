@@ -4,7 +4,7 @@
   import organizers from "../assets/organizers.json";
 </script>
 
-<Section title="Organizers">
+<Section title="Organizers" dark={true}>
   <div class="organizers">
     {#each organizers as organizer}
       <div class="organizer">
