@@ -11,7 +11,6 @@
   import Map from "./components/Map.svelte";
   import Time from "./lib/Time.svelte";
   import Organizers from "./components/Organizers.svelte";
-  import Sponsor from "./lib/Sponsor.svelte";
   import Sponsors from "./components/Sponsors.svelte";
 </script>
 
