@@ -11,7 +11,6 @@
   import Map from "./components/Map.svelte";
   import Time from "./lib/Time.svelte";
   import Organizers from "./components/Organizers.svelte";
-  import Sponsor from "./lib/Sponsor.svelte";
   import Sponsors from "./components/Sponsors.svelte";
 </script>
 
@@ -46,7 +45,7 @@
         the <Link href="https://ridgecompsci.club"
           >Ridge Computer Science Club</Link
         >. Following a single day, 12-hour hacking schedule, Ridgehacks offers a
-        free hackathon for Middle and High School Students from <Time
+        free hackathon for Middle, High School, and College Students from <Time
           hour={8}
         /> until <Time hour={22} />.
       </p>

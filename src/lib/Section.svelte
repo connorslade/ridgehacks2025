@@ -24,7 +24,7 @@
     overflow-x: auto;
 
     &.dark {
-      background-color: #49808a;
+      background-color: var(--alternate-foreground-color);
       color: #fff;
     }
   }
