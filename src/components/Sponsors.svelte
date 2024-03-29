@@ -28,6 +28,8 @@
       image="hoke-capital.png"
       link="https://www.hokecapital.com"
     />
+    <Sponsor name="Incogni" image="incogni.png" link="https://incogni.com" />
+    <Sponsor name="NordPass" image="nordpass.png" link="https://nordpass.com" />
     <Sponsor name="Nord VPN" image="nord-vpn.png" link="https://nordvpn.com" />
     <Sponsor
       name="Perrotti"
