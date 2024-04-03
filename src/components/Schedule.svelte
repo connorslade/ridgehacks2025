@@ -86,7 +86,6 @@
     }
 
     for (let i = times.length - 1; i >= 0; i--) {
-      console.log(`Comparing ${times[i].toString()} to ${now.toString()}`);
       if (times[i].compareTo(now) < 0) {
         currentActivity = i;
         break;
@@ -103,9 +102,9 @@
   <table class="schedule">
     <thead>
       <th class="time">Time</th>
-      <th class="activity">Main Areas</th>
-      <th class="activity">Room 701</th>
-      <th class="activity">PAC</th>
+      {#each rooms as room}
+        <th class="activity">{room}</th>
+      {/each}
     </thead>
 
     {#each times as time, idx}
