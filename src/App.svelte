@@ -88,7 +88,7 @@
   <div class="footer">
     <img src={footerLogo} class="logo" alt="Ridgehacks 2024" />
 
-    <p>Ridge High School Hackathon, April 6st</p>
+    <p>Ridge High School Hackathon, April 6th</p>
     <p>268 S Finley Ave, Basking Ridge, NJ 07920</p>
     <a href="mailto:team@ridgehacks.us">team@ridgehacks.us</a>
   </div>
