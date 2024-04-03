@@ -47,4 +47,10 @@
     object-fit: contain;
     aspect-ratio: 1/1;
   }
+
+  @media (max-width: 583px) {
+    .container {
+      padding: 0;
+    }
+  }
 </style>

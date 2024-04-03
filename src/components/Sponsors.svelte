@@ -68,4 +68,10 @@
     justify-items: center;
     padding-bottom: 10px;
   }
+
+  @media (max-width: 583px) {
+    .sponsors {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  }
 </style>
