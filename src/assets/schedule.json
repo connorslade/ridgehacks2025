@@ -1,22 +1,21 @@
 {
   "Cafeteria": {
-    "09:00": "Breakfast & Team Making",
+    "09:00": "Breakfast and Team Making",
     "10:00": "Hacking begins",
     "13:00": "Lunch",
-    "16:00": "Chess",
+    "14:00": "Kahoot",
+    "16:00": "Among Us",
     "18:00": "Dinner",
     "19:00": "Mario Kart",
     "20:00": "Hacking Ends",
     "22:00": "Event Ends"
   },
   "Lecture Hall": {
-    "11:00": "Unity Workshop",
-    "12:00": "Workshop",
-    "13:00": "Machine Learning and Data Science Workshop",
-    "14:00": "Kahoot",
-    "15:00": "Computer Repair Workshop",
-    "16:00": "Chess and Information Theory Workshop",
-    "17:00": "Web Dev and CSS Workshop",
+    "11:00": "Web Dev and CSS Workshop",
+    "12:00": "Machine Learning and Data Science Workshop",
+    "15:00": "Unity Workshop",
+    "16:00": "Information Theory Workshop",
+    "17:00": "Computer Repair Workshop",
     "20:00": "Guest Speaker"
   },
   "PAC": {
