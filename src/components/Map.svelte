@@ -33,6 +33,7 @@
     map.addControl(scale);
     map.addControl(geolocate);
     map.addControl(navigation);
+    map.scrollZoom.disable();
   });
 </script>
 
