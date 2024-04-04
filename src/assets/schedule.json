@@ -6,17 +6,16 @@
     "14:00": "Kahoot (annex)",
     "16:00": "Among Us",
     "18:00": "Dinner",
-    "19:00": "Mario Kart (annex)",
     "20:00": "Hacking Ends",
+    "20:15": "Mario Kart (annex)",
     "22:00": "Event Ends"
   },
-  "Lecture Hall": {
+  "Room 701": {
     "11:00": "Web Dev and CSS Workshop",
     "12:00": "Machine Learning and Data Science Workshop",
     "15:00": "Unity Workshop",
     "16:00": "Information Theory Workshop",
-    "17:00": "Computer Repair Workshop",
-    "20:00": "Guest Speaker"
+    "17:00": "Computer Repair Workshop"
   },
   "PAC": {
     "08:00": "Doors Open",

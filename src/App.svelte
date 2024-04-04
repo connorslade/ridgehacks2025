@@ -12,6 +12,7 @@
   import Time from "./lib/Time.svelte";
   import Organizers from "./components/Organizers.svelte";
   import Sponsors from "./components/Sponsors.svelte";
+  import Faq from "./components/Faq.svelte";
 </script>
 
 <main>
@@ -24,6 +25,8 @@
     <InnerLink href="#event-details">Event Details</InnerLink>
     <InnerLink href="#what-is-a-hackathon">What is a Hackathon</InnerLink>
     <InnerLink href="#map">Map</InnerLink>
+    <InnerLink href="#faq">Faq</InnerLink>
+    <InnerLink href="#judges">Judges</InnerLink>
     <InnerLink href="#sponsors">Sponsors</InnerLink>
     <InnerLink href="#organizers">Organizers</InnerLink>
     <Link
@@ -79,6 +82,12 @@
     </Section>
 
     <Map />
+
+    <Faq />
+
+    <Section title="Judges" dark={true}>
+      <p>More information coming soon.</p>
+    </Section>
 
     <Sponsors />
 

@@ -12,11 +12,4 @@ const app = new App({
 
 inject();
 
-navigator.serviceWorker.register("service-worker.js").then((registration) => {
-  serviceWorker = registration;
-  registration.pushManager.getSubscription().then((subscription) => {
-    subscribed.set(subscription !== null);
-  });
-});
-
 export default app;
