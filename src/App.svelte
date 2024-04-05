@@ -86,7 +86,26 @@
     <Faq />
 
     <Section title="Judges" dark={true}>
-      <p>More information coming soon.</p>
+      <ListItem title="Cy Westbrook">
+        Computer Science Student at Rutgers University
+      </ListItem>
+      <ListItem title="Lauren Tan">
+        Computer Science Teacher at Ridge High School
+      </ListItem>
+      <ListItem title="Leo Lawrence">
+        Application Developer / SWE and Student at Rutgers University
+      </ListItem>
+      <ListItem title="Mark Galesi">
+        Computer Science Teacher at Ridge High School
+      </ListItem>
+      <ListItem title="Ramesh Balaji">
+        Software Engineer at Loide Technology / CS and Math Student at Rutgers
+        University
+      </ListItem>
+      <ListItem title="Tim Tirrell">Sr Data Engineer at Healthix</ListItem>
+      <ListItem title="Zhimin Xi">
+        Associate professor at Rutgers University
+      </ListItem>
     </Section>
 
     <Sponsors />
