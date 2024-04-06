@@ -80,7 +80,7 @@
   function refreshActivity() {
     let nowRaw = new Date();
     let now = EventTime.fromDate(nowRaw);
-    if (nowRaw < eventDate || nowRaw > addDateHours(eventDate, 12)) {
+    if (nowRaw < eventDate || nowRaw > addDateHours(eventDate, 24)) {
       currentActivity = -1;
       return;
     }
