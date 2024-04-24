@@ -29,19 +29,20 @@
     <InnerLink href="#judges">Judges</InnerLink>
     <InnerLink href="#sponsors">Sponsors</InnerLink>
     <InnerLink href="#organizers">Organizers</InnerLink>
-    <Link
+    <span style="color: var(--accent-color); cursor: no-drop;"> Register </span>
+    <!-- <Link
       href="https://forms.gle/mHgRcivPSz6Xdpxb9"
       style="color: var(--accent-color)">Register</Link
-    >
+    > -->
   </div>
 
   <div class="sections">
     <Section title="Ridgehacks 2024">
-      <h2>
+      <!-- <h2>
         Registration is currently open. Fill out <Link
           href="https://forms.gle/mHgRcivPSz6Xdpxb9">this form</Link
         > to sign up.
-      </h2>
+      </h2> -->
 
       <p>
         Ridgehacks 2024 is Ridge High School's premier annual hackathon led by
@@ -148,7 +149,8 @@
     margin-bottom: 30px;
     line-height: 1em;
 
-    & :global(a) {
+    & :global(a),
+    & :global(span) {
       color: #fff;
       text-decoration: none;
       font-size: 20px;
