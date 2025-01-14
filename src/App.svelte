@@ -26,7 +26,6 @@
         <InnerLink href="#map">Map</InnerLink>
         <InnerLink href="#faq">Faq</InnerLink>
         <InnerLink href="#sponsors">Sponsors</InnerLink>
-        <InnerLink href="#organizers">Organizers</InnerLink>
         <span style="color: var(--accent-color); cursor: no-drop;">
             Register
         </span>
