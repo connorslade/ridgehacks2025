@@ -25,9 +25,8 @@
     </Faq>
 
     <Faq question="What can I make?">
-        Anything. Software, hardware, middleware, malware, anything that ends
-        with “ware” and starts with you typing lines of code. And even more than
-        that!
+        Anything. Software, hardware, middleware, anything that ends with “ware”
+        and starts with you typing lines of code. And even more than that!
     </Faq>
 
     <Faq question="What's in it for me?">
