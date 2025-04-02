@@ -97,8 +97,6 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-missing-attribute -->
 <Section title="Schedule" dark={true}>
-    <p>Note that this schedule is still subject to change.</p>
-
     <table class="schedule">
         <thead>
             <th class="time">Time</th>

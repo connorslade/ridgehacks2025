@@ -1,16 +1,16 @@
 {
   "Main": {
-    "08:00": "Doors Open",
-    "08:30": "Opening Ceremony",
-    "09:00": "Breakfast & Team Making",
+    "08:00": "Doors Open (Pac Lobby)",
+    "08:30": "Opening Ceremony (Pac)",
+    "09:00": "Breakfast & Team Making (Cafe)",
     "10:00": "Hacking begins",
-    "13:00": "Lunch",
-    "18:00": "Dinner",
+    "13:00": "Lunch (Cafe)",
+    "18:00": "Dinner (Cafe)",
     "19:00": "Lock in",
-    "20:00": "Hacking ends",
-    "21:00": "Presentations"
+    "20:00": "Hacking ends (Cafe)",
+    "21:00": "Presentations (Pac)"
   },
-  "Workshops": {
+  "Workshops (Room 701)": {
     "11:00": "C++ & Web Dev with Brandon",
     "14:00": "Cybersecurity with Maya",
     "17:00": "Machine Learning with Charlotte"
@@ -18,7 +18,7 @@
   "Activities": {
     "12:00": "Kahoot (Annex)",
     "15:00": "Among Us (Annex)",
-    "20:00": "Mario Kart (Cafeteria)",
+    "20:00": "Mario Kart (Cafe)",
     "16:00": "Badminton (Gym)"
   }
 }

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Balsamiq",
+    "image": "balsamiq.png",
+    "link": "https://balsamiq.com"
+  },
+  {
+    "name": "Buona Pizza",
+    "image": "buona-pizza.svg",
+    "link": "https://www.buonapizzanj.com"
+  },
+  {
+    "name": "CoCalc",
+    "image": "cocalc.png",
+    "link": "https://cocalc.com"
+  },
+  {
+    "name": "Gar",
+    "image": "gar.png",
+    "link": "https://automationroboticsarduino.com"
+  },
+  {
+    "name": "Hack United",
+    "image": "hackunited.png",
+    "link": "https://hackunited.org"
+  },
+  {
+    "name": "Hoke Capital",
+    "image": "hoke-capital.png",
+    "link": "https://www.hokecapital.com"
+  },
+  {
+    "name": "Incogni",
+    "image": "incogni.png",
+    "link": "https://incogni.com"
+  },
+  {
+    "name": "Nord Pass",
+    "image": "nord-pass.png",
+    "link": "https://nordpass.com"
+  },
+  {
+    "name": "Nord VPN",
+    "image": "nord-vpn.png",
+    "link": "https://nordvpn.com"
+  },
+  {
+    "name": "Perrottis",
+    "image": "perrottis.svg",
+    "link": "https://www.perrottis.com"
+  },
+  {
+    "name": "Bernards Township Police Department",
+    "image": "police-department.png",
+    "link": "https://www.bernards.org/departments/police"
+  },
+  {
+    "name": "Ridge Marketing",
+    "image": "ridge-marketing.png",
+    "link": "https://ridgemarketing.com"
+  },
+  {
+    "name": "Saily",
+    "image": "saily.png",
+    "link": "https://saily.com"
+  },
+  {
+    "name": "Verizon",
+    "image": "verizon.png",
+    "link": "https://www.verizon.com"
+  }
+]
