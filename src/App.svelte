@@ -26,6 +26,7 @@
         <InnerLink href="#map">Map</InnerLink>
         <InnerLink href="#faq">Faq</InnerLink>
         <InnerLink href="#sponsors">Sponsors</InnerLink>
+        <InnerLink href="#organizers">Organizers</InnerLink>
         <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSeX2oWzt4c5QYqnfoRuY4MnMgXu57qRUfSDwbtspz8Ij34mGw/viewform?usp=header"
             style="color: var(--accent-color)">Register</Link
@@ -90,7 +91,7 @@
 
         <Sponsors />
 
-        <!-- <Organizers /> -->
+        <Organizers />
     </div>
 
     <div class="footer">

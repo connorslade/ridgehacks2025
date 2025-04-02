@@ -97,39 +97,36 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-missing-attribute -->
 <Section title="Schedule" dark={true}>
-    <p>
-        Schedule will be released when we get closer to the day of the
-        Hackathon.
-    </p>
+    <p>Note that this schedule is still subject to change.</p>
 
-    <!-- <table class="schedule">
-    <thead>
-      <th class="time">Time</th>
-      {#each rooms as room}
-        <th class="activity">{room}</th>
-      {/each}
-    </thead>
+    <table class="schedule">
+        <thead>
+            <th class="time">Time</th>
+            {#each rooms as room}
+                <th class="activity">{room}</th>
+            {/each}
+        </thead>
 
-    {#each times as time, idx}
-      <tr class:current-time={idx == currentActivity}>
-        <td>
-          <Time hour={time.hour} minute={time.minute} />
-        </td>
-        {#each rooms as room}
-          {#if data[room][time.toString()]}
-            <td>{@html data[room][time.toString()]}</td>
-          {:else}
-            <td></td>
-          {/if}
+        {#each times as time, idx}
+            <tr class:current-time={idx == currentActivity}>
+                <td>
+                    <Time hour={time.hour} minute={time.minute} />
+                </td>
+                {#each rooms as room}
+                    {#if data[room][time.toString()]}
+                        <td>{@html data[room][time.toString()]}</td>
+                    {:else}
+                        <td></td>
+                    {/if}
+                {/each}
+            </tr>
         {/each}
-      </tr>
-    {/each}
-  </table>
+    </table>
 
-  <!-- svelte-ignore a11y-click-events-have-key-events
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <a class="format-toggle" on:click={toggleTimeFormat}>
         Switch to {$settings.militaryTime ? "12" : "24"} hour time.
-    </a> -->
+    </a>
 </Section>
 
 <style lang="scss">
