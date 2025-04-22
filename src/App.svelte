@@ -24,6 +24,7 @@
         <InnerLink href="#event-details">Event Details</InnerLink>
         <InnerLink href="#what-is-a-hackathon">What is a Hackathon</InnerLink>
         <InnerLink href="#map">Map</InnerLink>
+        <InnerLink href="#judges">Judges</InnerLink>
         <InnerLink href="#faq">Faq</InnerLink>
         <InnerLink href="#sponsors">Sponsors</InnerLink>
         <InnerLink href="#organizers">Organizers</InnerLink>
@@ -83,11 +84,31 @@
 
         <Map />
 
-        <Faq />
+        <Section title="Judges" dark={true}>
+            <ListItem title="Lauren Tan">
+                Computer Science Teacher at Ridge High School
+            </ListItem>
+            <ListItem title="Mark Galesi">
+                Computer Science Teacher at Ridge High School
+            </ListItem>
+            <ListItem title="Zhimin Xi">
+                Associate Professor at Rutgers University School of Engineering
+            </ListItem>
+            <ListItem title="Maya Pasricha">
+                Development Team Lead at New York University's Osiris Lab
+            </ListItem>
+            <ListItem title="Tim Tirrell">
+                Senior Data Engineer at Healthix
+            </ListItem>
+            <ListItem title="Tejas Chakrapani">
+                Student Judge for the Startup Ready Award
+            </ListItem>
+            <ListItem title="Pranav Aggarwal">
+                Student Judge for the Startup Ready Award
+            </ListItem>
+        </Section>
 
-        <!-- <Section title="Judges" dark={true}>
-            <p>todo</p>
-        </Section> -->
+        <Faq />
 
         <Sponsors />
 
