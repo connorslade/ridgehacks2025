@@ -25,9 +25,9 @@
         <InnerLink href="#event-details">Event Details</InnerLink>
         <InnerLink href="#what-is-a-hackathon">What is a Hackathon</InnerLink>
         <InnerLink href="#map">Map</InnerLink>
-        <InnerLink href="#judges">Judges</InnerLink>
         <InnerLink href="#faq">Faq</InnerLink>
         <InnerLink href="#sponsors">Sponsors</InnerLink>
+        <InnerLink href="#judges">Judges</InnerLink>
         <InnerLink href="#organizers">Organizers</InnerLink>
         <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSeX2oWzt4c5QYqnfoRuY4MnMgXu57qRUfSDwbtspz8Ij34mGw/viewform?usp=header"
@@ -84,9 +84,9 @@
         </Section>
 
         <Map />
-        <Judges />
         <Faq />
         <Sponsors />
+        <Judges />
         <Organizers />
     </div>
 

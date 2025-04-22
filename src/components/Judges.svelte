@@ -5,7 +5,7 @@
     import judges from "../assets/judges.json";
 </script>
 
-<Section title="Judges" dark={true}>
+<Section title="Judges">
     {#each judges as judge}
         <ListItem title={judge.title}>
             {judge.description}
