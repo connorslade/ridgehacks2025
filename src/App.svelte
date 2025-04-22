@@ -12,6 +12,7 @@
     import Organizers from "./components/Organizers.svelte";
     import Sponsors from "./components/Sponsors.svelte";
     import Faq from "./components/Faq.svelte";
+    import Judges from "./components/Judges.svelte";
 </script>
 
 <main>
@@ -83,35 +84,9 @@
         </Section>
 
         <Map />
-
-        <Section title="Judges" dark={true}>
-            <ListItem title="Lauren Tan">
-                Computer Science Teacher at Ridge High School
-            </ListItem>
-            <ListItem title="Mark Galesi">
-                Computer Science Teacher at Ridge High School
-            </ListItem>
-            <ListItem title="Zhimin Xi">
-                Associate Professor at Rutgers University School of Engineering
-            </ListItem>
-            <ListItem title="Maya Pasricha">
-                Development Team Lead at New York University's Osiris Lab
-            </ListItem>
-            <ListItem title="Tim Tirrell">
-                Senior Data Engineer at Healthix
-            </ListItem>
-            <ListItem title="Tejas Chakrapani">
-                Student Judge for the Startup Ready Award
-            </ListItem>
-            <ListItem title="Pranav Aggarwal">
-                Student Judge for the Startup Ready Award
-            </ListItem>
-        </Section>
-
+        <Judges />
         <Faq />
-
         <Sponsors />
-
         <Organizers />
     </div>
 
