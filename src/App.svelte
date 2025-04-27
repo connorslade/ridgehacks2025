@@ -29,20 +29,23 @@
         <InnerLink href="#sponsors">Sponsors</InnerLink>
         <InnerLink href="#judges">Judges</InnerLink>
         <InnerLink href="#organizers">Organizers</InnerLink>
-        <Link
+        <span style="color: var(--accent-color); cursor: no-drop;"
+            >Register</span
+        >
+        <!-- <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSeX2oWzt4c5QYqnfoRuY4MnMgXu57qRUfSDwbtspz8Ij34mGw/viewform?usp=header"
             style="color: var(--accent-color)">Register</Link
-        >
+        > -->
     </div>
 
     <div class="sections">
         <Section title="Ridgehacks 2025">
-            <h2>
+            <!-- <h2>
                 Registration is currently open. Fill out <Link
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeX2oWzt4c5QYqnfoRuY4MnMgXu57qRUfSDwbtspz8Ij34mGw/viewform?usp=header"
                     >this form</Link
                 > to sign up.
-            </h2>
+            </h2> -->
 
             <p>
                 Ridgehacks 2025 is Ridge High School's premier annual hackathon
