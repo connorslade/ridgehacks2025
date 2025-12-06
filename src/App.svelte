@@ -1,6 +1,6 @@
 <script type="ts">
-    import logo from "./assets/logo.svg";
-    import footerLogo from "./assets/ridgehacks.svg";
+    import logo2026 from "./assets/logo2026.png";
+    import footerLogo2026 from "./assets/ridgehacks2026.png";
 
     import InnerLink from "./lib/InnerLink.svelte";
     import Section from "./lib/Section.svelte";
@@ -17,7 +17,7 @@
 
 <main>
     <a href="/">
-        <img src={logo} alt="Ridgehacks 2025 logo" class="logo" />
+        <img src={logo2026} alt="Ridgehacks 2026 logo" class="logo" />
     </a>
 
     <div class="navbar">
@@ -39,7 +39,7 @@
     </div>
 
     <div class="sections">
-        <Section title="Ridgehacks 2025">
+        <Section title="Ridgehacks 2026">
             <!-- <h2>
                 Registration is currently open. Fill out <Link
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeX2oWzt4c5QYqnfoRuY4MnMgXu57qRUfSDwbtspz8Ij34mGw/viewform?usp=header"
@@ -48,19 +48,19 @@
             </h2> -->
 
             <p>
-                Ridgehacks 2025 is Ridge High School's premier annual hackathon
+                Ridgehacks 2026 is Ridge High School's premier annual hackathon
                 led by the <Link href="https://ridgecompsci.club"
                     >Ridge Computer Science Club</Link
                 >. Following a single day, 12-hour hacking schedule, Ridgehacks
-                offers a free hackathon for Middle, High School, and College
-                Students from <Time hour={8} /> until <Time hour={22} />.
+                offers a free hackathon for middle, high school, and college
+                students from <Time hour={8} /> until <Time hour={22} />.
             </p>
         </Section>
 
-        <Schedule />
+        <!-- <Schedule /> -->
 
         <Section title="Event Details">
-            <ListItem title="Date">April 26th, 2025</ListItem>
+            <ListItem title="Date">April 25th, 2026</ListItem>
             <ListItem title="Who can attend">
                 Any high school or college students student who's down to make
                 something awesome. Or anything tech, or programming related
@@ -94,9 +94,9 @@
     </div>
 
     <div class="footer">
-        <img src={footerLogo} class="logo" alt="Ridgehacks 2025" />
+        <img src={footerLogo2026} class="logo" alt="Ridgehacks 2026" />
 
-        <p>Ridge High School Hackathon, April 26th</p>
+        <p>Ridge High School Hackathon, April 25th</p>
         <p>268 S Finley Ave, Basking Ridge, NJ 07920</p>
         <a href="mailto:team@ridgehacks.us">team@ridgehacks.us</a>
     </div>

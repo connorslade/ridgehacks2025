@@ -1,17 +1,14 @@
 [
-  { "name": "Brandon Li", "role": "President" },
-  { "name": "Hannah Chee", "role": "President" },
-  { "name": "Eric Zhang", "role": "Vice President" },
-  { "name": "Tejas Chakrapani", "role": "Secretary" },
-  { "name": "Elvis Huang", "role": "Fundraising Coordinator" },
-  { "name": "Sophia Cheenath", "role": "Graphic Designer & Social Media" },
-  { "name": "Aalisha Sugur (Alex)", "role": "Fundraising Coordinator" },
-  { "name": "Noah Xi", "role": "Ridgehacks Director" },
-  { "name": "Sahithi Gorthi", "role": "Ridgehacks Director" },
+  { "name": "Tejas Chakrapani", "role": "Co-President" },
+  { "name": "Sophia Cheenath", "role": "Co-President" },
+  { "name": "Sahithi Gorthi", "role": "Vice President of RidgeHacks" },
+  { "name": "Noah Xi", "role": "Vice President of Club Operations" },
+  { "name": "Aalisha Sugur (Alex)", "role": "Vice President of Fundraising" },
   { "name": "Brandon Bonura", "role": "Technology Director" },
-  { "name": "Wesley Chen", "role": "Technology Director" },
-  { "name": "Connor Slade", "role": "Technology Director" },
   { "name": "Charlotte Liu", "role": "Education Director" },
   { "name": "Max Peng", "role": "Education Director" },
-  { "name": "Joseph Chan", "role": "Education Director" }
+  { "name": "Adelaide Li", "role": "Ridgehacks Coordinator" },
+  { "name": "Andy Wang", "role": "Fundraising Coordinator" },
+  { "name": "Riya Laheja", "role": "Fundraising Coordinator" },
+  { "name": "Pranav Aggarwal", "role": "Graphic Designer / Social Media Manager" }
 ]

@@ -18,7 +18,7 @@
     </Faq>
 
     <Faq question="How long is the event? When is it? Where is it?">
-        It's on April 26th, 2025 from <Time hour={8} /> to <Time hour={22} />.
+        It's on April 25th, 2026 from <Time hour={8} /> to <Time hour={22} />.
         It's at Ridge High School. You can find the address for our hackathon
         under
         <InnerLink href="#event-details">Event Details</InnerLink>.
