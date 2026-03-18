@@ -53,7 +53,7 @@
                     >Ridge Computer Science Club</Link
                 >. Following a single day, 12-hour hacking schedule, Ridgehacks
                 offers a free hackathon for middle, high school, and college
-                students from <Time hour={8} /> until <Time hour={22} />.
+                students from <Time hour={8} /> until <Time hour={21} />.
             </p>
         </Section>
 
