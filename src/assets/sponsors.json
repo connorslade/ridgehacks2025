@@ -1,5 +1,10 @@
 [
   {
+    "name": "Art of Problem Solving",
+    "image": "Aops.svg",
+    "link": "https://artofproblemsolving.com/"
+  },
+  {
     "name": "Balsamiq",
     "image": "balsamiq.png",
     "link": "https://balsamiq.com"
@@ -10,16 +15,6 @@
     "link": "https://www.buonapizzanj.com"
   },
   {
-    "name": "Nexos.ai",
-    "image": "Nexos AI.svg",
-    "link": "https://nexos.ai"
-  },
-  {
-    "name": "Art of Problem Solving",
-    "image": "Aops.svg",
-    "link": "https://artofproblemsolving.com/"
-  },
-  {
     "name": "Interview Cake",
     "image": "Interview Cake.svg",
     "link": "https://www.interviewcake.com/"
@@ -28,6 +23,11 @@
     "name": "Hoke Capital",
     "image": "hoke-capital.png",
     "link": "https://www.hokecapital.com"
+  },
+  {
+    "name": "Hack United",
+    "image": "hackunited.png",
+    "link": "https://hackunited.org"
   },
   {
     "name": "Maschio's",
@@ -48,6 +48,16 @@
     "name": "Nord Protect",
     "image": "Nord Protect.svg",
     "link": "https://nordprotect.com/"
+  },
+  {
+    "name": "Nexos.ai",
+    "image": "Nexos AI.svg",
+    "link": "https://nexos.ai"
+  },
+  {
+    "name": "Incogni",
+    "image": "incogni.png",
+    "link": "https://incogni.com"
   },
   {
     "name": "Perrottis",
