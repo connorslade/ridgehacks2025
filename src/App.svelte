@@ -46,6 +46,9 @@
                     >this form</Link
                 > to sign up.
             </h2> -->
+            <h2>
+                Due to the number of registrations hitting our maximum amount, we unfortunately have to close registration. If you have any questions or concerns, please let us know at team@ridgehacks.us! Thank you for your understanding.
+            </h2>
 
             <p>
                 Ridgehacks 2026 is Ridge High School's premier annual hackathon
