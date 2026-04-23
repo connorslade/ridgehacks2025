@@ -32,20 +32,20 @@
         <!-- <span style="color: var(--accent-color); cursor: no-drop;"
             >Register</span
         > -->
-        <Link
+        <!-- <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSfReM4rMy7cnc0vBCGmxBIOd5592djuuluuwOyJxzCYoLs_2w/viewform"
             style="color: var(--accent-color)">Register</Link
-        >
+        > -->
     </div>
 
     <div class="sections">
         <Section title="Ridgehacks 2026">
-             <h2>
+            <!-- <h2>
                 Registration is currently open! Fill out <Link
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfReM4rMy7cnc0vBCGmxBIOd5592djuuluuwOyJxzCYoLs_2w/viewform"
                     >this form</Link
                 > to sign up.
-            </h2>
+            </h2> -->
 
             <p>
                 Ridgehacks 2026 is Ridge High School's premier annual hackathon
