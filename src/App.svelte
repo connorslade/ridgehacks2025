@@ -60,7 +60,7 @@
             </p>
         </Section>
 
-        <!-- <Schedule /> -->
+        <Schedule />
 
         <Section title="Event Details">
             <ListItem title="Date">April 25th, 2026</ListItem>
